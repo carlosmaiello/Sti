@@ -1,5 +1,5 @@
 {
-    "name": "muffin/sti",
+    "name": "carlosmaiello/sti",
     "description": "Single Table Inheritance for CakePHP 3 ORM",
     "type": "cakephp-plugin",
     "keywords": [
