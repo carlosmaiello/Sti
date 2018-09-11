@@ -96,6 +96,7 @@ class StiBehavior extends Behavior
 
         $query->formatResults(function ($results) {
             return $results->map(function ($row) {
+              if (!empty($row)) {
                 $type = $row[$this->config('typeField')];
                 $entityClass = $this->_typeMap[$type]['entityClass'];
                 return new $entityClass($row->forCopy(), [
@@ -104,6 +105,7 @@ class StiBehavior extends Behavior
                     'guard' => false,
                     'source' => $this->_typeMap[$type]['alias'],
                 ]);
+              }
             });
         });
     }
